@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Jewelry</string>
+    <string name="fastest_delivery">Fastest Delivery\n24/7</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="welcome_to_wsr_food">Welcome To\nWSR Food</string>
+    <string name="skip_authorization">Skip authorization</string>
+    <string name="e_mail">E-mail</string>
+    <string name="deliver_mail_ru">deliver@mail.ru</string>
+    <string name="password">Password</string>
+    <string name="your_password">Your password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="full_name_example">Olivie Berlusco</string>
+    <string name="phone_number_example">+7 (944) 444-44-44</string>
+    <string name="phone_number">Phone number</string>
+    <string name="full_name">Full name</string>
+    <string name="register_now">Register Now</string>
+    <string name="cancel">Cancel</string>
+    <string name="invalid_login_or_password">Неправильно введённый логин или пароль</string>
+    <string name="invalid_data">Неверные данные</string>
+    <string name="fill_the_data_correctly">Заполните данные в правильном формате</string>
+    <string name="ok">OK</string>
+    <string name="choose_ship_address">Выберите адрес доставки</string>
+    <string name="search">Search</string>
+    <string name="foods">Foods</string>
+    <string name="drinks">Drinks</string>
+    <string name="snacks">Snacks</string>
+    <string name="sauce">Sauce</string>
+    <string name="invalid_token">Невалидный токен</string>
+</resources>
