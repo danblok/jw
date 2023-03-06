@@ -11,7 +11,7 @@ public class Validator {
     }
 
     public static boolean isPhoneNumberValid(String phone) {
-        Pattern pattern = Pattern.compile("^\\+?[(]?\\d{3}[)]?[-\\s.]?\\d{3}[-\\s.]?\\d{5}$");
+        Pattern pattern = Pattern.compile("^\\+7\\s[(]\\d{3}[)]\\s\\d{3}-\\d{2}-\\d{2}$");
         return pattern.matcher(phone).matches();
     }
 }

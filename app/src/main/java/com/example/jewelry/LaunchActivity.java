@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class LaunchActivity extends AppCompatActivity {
+
     private static final String TAG = "LaunchActivity";
     private LaunchViewModel viewModel;
 
@@ -39,15 +40,6 @@ public class LaunchActivity extends AppCompatActivity {
         viewModel.getError().observe(this, error -> {
             Log.e(TAG, error);
         });
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        /* TODO if the internet isn't available then just start the OnBoarding1 activity
-           TODO otherwise check if the menu version is equal to the locally saved one and
-           TODO if not then fetch all dishes from the DB by the api and save it to the Local DB */
-
     }
 
     private boolean isNetworkAvailable() {

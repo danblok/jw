@@ -47,7 +47,6 @@ public class LaunchViewModel extends AndroidViewModel {
     }
 
     public void refreshDishes() {
-
             Disposable disposable = dao.removeAllDishes()
                     .andThen(api.loadDishes())
                     .map(DishResponse::getDishes)
@@ -60,7 +59,6 @@ public class LaunchViewModel extends AndroidViewModel {
                             },
                             throwable -> error.setValue(throwable.getMessage())
                     );
-
 
             compositeDisposable.add(disposable);
     }

@@ -19,6 +19,7 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.ViewHolder
     private final LayoutInflater inflater;
     private List<Dish> dishes = new ArrayList<>();
     private final Context context;
+    private OnItemClickListener onItemClickListener;
 
     public DishesAdapter(Context context) {
         this.context = context;
@@ -27,6 +28,11 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.ViewHolder
 
     public void setDishes(List<Dish> dishes) {
         this.dishes = dishes;
+        notifyDataSetChanged();
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     @Override
@@ -40,14 +46,23 @@ public class DishesAdapter extends RecyclerView.Adapter<DishesAdapter.ViewHolder
         Dish dish = dishes.get(position);
         holder.name.setText(dish.getName());
         holder.price.setText("N" + dish.getPrice());
-/*        Glide.with(context)
+        Glide.with(context)
                 .load(dish.getIcon())
-                .into(holder.logo);*/
+                .into(holder.logo);
+        holder.itemView.setOnClickListener(view -> {
+            if (onItemClickListener != null) {
+                onItemClickListener.onItemClick(dish);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return dishes.size();
+    }
+
+    interface OnItemClickListener {
+        void onItemClick(Dish dish);
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

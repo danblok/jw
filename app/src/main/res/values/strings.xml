@@ -28,4 +28,10 @@
     <string name="snacks">Snacks</string>
     <string name="sauce">Sauce</string>
     <string name="invalid_token">Невалидный токен</string>
+    <string name="results">Results</string>
+    <string name="adds">Реклама</string>
+    <string name="go_to_cart">Go to cart</string>
+    <string name="continue_shop">Continue Shop</string>
+    <string name="delivery_info">Delivery info</string>
+    <string name="add_to_cart">Add to cart</string>
 </resources>

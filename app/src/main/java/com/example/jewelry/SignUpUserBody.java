@@ -3,13 +3,13 @@ package com.example.jewelry;
 public class SignUpUserBody {
     private String email;
     private String password;
-    private String name;
+    private String fullname;
     private String phone;
 
     public SignUpUserBody(String email, String password, String name, String phone) {
         this.email = email;
         this.password = password;
-        this.name = name;
+        this.fullname = name;
         this.phone = phone;
     }
 
@@ -29,12 +29,12 @@ public class SignUpUserBody {
         this.password = password;
     }
 
-    public String getName() {
-        return name;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
     public String getPhone() {

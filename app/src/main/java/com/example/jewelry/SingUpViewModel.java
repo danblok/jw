@@ -28,11 +28,10 @@ public class SingUpViewModel extends ViewModel {
         Disposable disposable = api.signUp(new SignUpUserBody(email, password, name, phone))
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(() -> {
-                    isSignedUp.setValue(true);
-                }, throwable -> {
-                    error.setValue(throwable.getMessage());
-                });
+                .subscribe(
+                        () -> isSignedUp.setValue(true),
+                        throwable -> error.setValue(throwable.getMessage())
+                );
 
         compositeDisposable.add(disposable);
     }
