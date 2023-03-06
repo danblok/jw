@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-5061314870600158~3499183691"/>
+
         <activity
             android:name=".ItemScreenActivity"
             android:exported="false">

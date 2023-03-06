@@ -22,6 +22,13 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.jewelry.databinding.ActivityMainScreenBinding;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.nativead.NativeAd;
+import com.google.android.gms.ads.nativead.NativeAdOptions;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -37,8 +44,6 @@ public class MainScreenActivity extends AppCompatActivity {
     private DishesAdapter adapter;
     private List<Dish> dishes;
     private List<Dish> currentDishes;
-    private Boolean isScrolling = false;
-    private float deltaY = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +63,8 @@ public class MainScreenActivity extends AppCompatActivity {
         setupListeners();
         observeViewModel();
         viewModel.loadDishes();
+
+        binding.linearLayoutAdds.loadAd(new AdRequest.Builder().build());
     }
 
     @SuppressLint("ClickableViewAccessibility")
